@@ -2,7 +2,8 @@ language: go
 go:
   - 1.11.x
 install:
-  - go get -v -u GitHub.com/gohugoio/hugo
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.101.0_Linux-64bit.deb
 script:
   - mkdir -p themes/beautifulhugo && git clone https://GitHub.com/halogenica/beautifulhugo.git themes/beautifulhugo
   - hugo --theme beautifulhugo
